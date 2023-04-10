@@ -30,15 +30,9 @@ function HomeCarousel() {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {data.map((slide, i) => {
         return (
-<<<<<<< HEAD
-          <Carousel.Item>
-            <img
-              style={{ height: "400px" }}
-=======
           <Carousel.Item key={i}>
             <img
               style={{ height: "600px" }}
->>>>>>> c2242bff4c1b4c5b900762f4c466f725c6a06d05
               className="d-block w-100"
               src={slide.image}
               alt="slider image"
@@ -47,18 +41,10 @@ function HomeCarousel() {
               <h3>{slide.caption}</h3>
               <p>{slide.description}</p>
             </Carousel.Caption>
-<<<<<<< HEAD
-
-=======
->>>>>>> c2242bff4c1b4c5b900762f4c466f725c6a06d05
           </Carousel.Item>
         );
       })}
     </Carousel>
   );
 }
-<<<<<<< HEAD
 export default HomeCarousel;
-=======
-export default HomeCarousel;
->>>>>>> c2242bff4c1b4c5b900762f4c466f725c6a06d05
