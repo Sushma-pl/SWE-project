@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { useHistory } from 'react-router-dom' ;
+// import { useHistory } from 'react-router-dom' ;
+// import {Link, Route, Routes} from 'react-router-dom';
+// import login from "../Login_page/login"
 
 export class Navbar extends Component {
   
-  let history = useHistory();
+  // let history = useHistory();
 
   render() {
     return (
@@ -66,9 +68,9 @@ export class Navbar extends Component {
             {/*  */}
             <ul className="navbar-nav navbar-right">
               <li>
-                <a href="../Login/login.js">
+                <a href="/">
                   <span className="glyphicon glyphicon-log-in"></span>
-                  <button type="button" className="btn btn-outline-info" onClick={()=>{history.push(/login);}}>Login</button>
+                  <button type="button" className="btn btn-outline-info">Login</button>
                 </a>
                 </li>
             </ul>
