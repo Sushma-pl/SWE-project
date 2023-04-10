@@ -1,23 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./components/homePage/Navbar";
+import Carousel from "./components/homePage/Carousel";
+import Footer from "./components/homePage/Footer";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+
+import Contents from "./components/homePage/Contents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <Navbar />
       </header>
+      <main>
+        {/* first line is not being displayed, I don't know reason */}
+        {/* <h2 className="mb-3">not needed</h2> */}
+        <h1 className="mb-3">Welcome to Research lab IITH</h1>
+        <h3 className="mb-3">Department of computer science</h3>
+
+        <div className="container" >
+
+        
+          <div className="row">
+            
+              {/* <Carousel /> */}
+           
+          </div>
+          <div className="row">
+            <Contents/>
+          </div>
+       
+        </div>
+
+      </main>
+    <Footer/>
     </div>
   );
 }
