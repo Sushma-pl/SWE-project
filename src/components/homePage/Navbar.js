@@ -11,7 +11,7 @@ export class Navbar extends Component {
   render() {
     return (
       <div>    
-       <nav className="navbar navbar-light navbar-expand-md bg-body-tertiary navbar-fixed-top nav-color">
+       <nav className="navbar navbar-light navbar-expand-md bg-body-tertiary fixed-top nav-color">
         <div className="container-fluid">
 
         <a className="navbar-brand h1 mt-2" href="/">Research Lab Management System</a>
