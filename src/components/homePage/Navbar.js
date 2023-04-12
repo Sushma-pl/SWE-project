@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-// import { useHistory } from 'react-router-dom' ;
-// import {Link, Route, Routes} from 'react-router-dom';
-// import login from "../Login_page/login"
-
+import Login from "../Login_page/Login"
+import { Link } from 'react-router-dom'
 export class Navbar extends Component {
   
-  // let history = useHistory();
+  
+  
 
   render() {
     return (
-      <div>    
+        <header>   
+      <div>
        <nav className="navbar navbar-light navbar-expand-md bg-body-tertiary fixed-top nav-color">
         <div className="container-fluid">
 
@@ -29,15 +29,15 @@ export class Navbar extends Component {
                 </li>
                 
                 <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/research" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                <a className="nav-link dropdown-toggle" href="/member" role="button" data-bs-toggle="dropdown" aria-expanded="true">
                    Members
                 </a>
 
                 <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/">Mentor</a></li>
-                    <li><a className="dropdown-item" href="#">Students</a></li>                    
-                    <li><a className="dropdown-item" href="#">Alumini</a></li>                    
-                    <li><a className="dropdown-item" href="#">Visitor</a></li>                                       
+                    <li><a className="dropdown-item" href="/member/mentor">Mentor</a></li>
+                    <li><a className="dropdown-item" href="/member/students">Students</a></li>                    
+                    <li><a className="dropdown-item" href="/member/alumini">Alumini</a></li>                    
+                    <li><a className="dropdown-item" href="/member/visitor">Visitor</a></li>                                       
                 </ul>
                 </li>
                 
@@ -47,37 +47,38 @@ export class Navbar extends Component {
                 </a>
                 <ul className="dropdown-menu">
                     <li><a className="dropdown-item" href="/research/seminar">Seminar</a></li>
-                    <li><a className="dropdown-item" href="#">Conference deadlines</a></li>                    
-                    <li><a className="dropdown-item" href="#">Awards</a></li>                    
-                    <li><a className="dropdown-item" href="#">Publications</a></li>                    
-                    <li><a className="dropdown-item" href="#">Inventory</a></li>                    
-                    <li><a className="dropdown-item" href="#">Facilities</a></li>                    
+                    <li><a className="dropdown-item" href="/research/conference">Conference deadlines</a></li>                    
+                    <li><a className="dropdown-item" href="/research/awards">Awards</a></li>                    
+                    <li><a className="dropdown-item" href="/research/publications">Publications</a></li>                    
+                    <li><a className="dropdown-item" href="/research/inventry">Inventory</a></li>                    
+                    <li><a className="dropdown-item" href="/research/facilities">Facilities</a></li>                    
                 </ul>
                 </li>
                 
                 <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/research" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a className="nav-link dropdown-toggle" href="/gallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                    Gallery
                 </a>
                 <ul className="dropdown-menu">
-                    <li><a className="dropdown-item" href="/">Photos</a></li>
-                    <li><a className="dropdown-item" href="#">Video</a></li>                                                         
+                    <li><a className="dropdown-item" href="/gallery/photos">Photos</a></li>
+                    <li><a className="dropdown-item" href="/gallery/video">Video</a></li>                                                         
                 </ul>
                 </li>
             </ul>
             {/*  */}
             <ul className="navbar-nav navbar-right">
               <li>
-                <a href="/">
+                <Link to="/login">
                   <span className="glyphicon glyphicon-log-in"></span>
-                  <button type="button" className="btn btn-outline-info">Login</button>
-                </a>
+                  <button type="button" className="btn btn-outline-info" >Login</button>
+                </Link>
                 </li>
             </ul>
             </div>
         </div>
         </nav>
       </div>
+      </header> 
     )
   }
 }
