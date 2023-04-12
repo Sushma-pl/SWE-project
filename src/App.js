@@ -4,6 +4,7 @@ import Carousel from "./components/homePage/Carousel";
 import Footer from "./components/homePage/Footer";
 import Contents from "./components/homePage/Contents";
 
+
 function App() {
   return (
     <div className="homepage">
@@ -12,16 +13,14 @@ function App() {
       </header>
       <main>
         <h1 className="mb-3">Welcome to Research lab IITH</h1>
-        <h3 className="mb-3">Department of computer science</h3>
 
-        <div className="container-fluid">
+        <div className="container-0 mx-6" >
           <div className="row">
             <Carousel />
           </div>
-          <div className="row">
+          <div className="row mx-3" >
             <Contents />
           </div>
-
         </div>
       </main>
       <Footer />

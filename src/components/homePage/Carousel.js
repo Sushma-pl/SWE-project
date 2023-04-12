@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import  { useEffect } from "react";
+
 
 
 const data = [
@@ -25,22 +27,43 @@ function HomeCarousel() {
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+   const [carouselHeight, setCarouselHeight] = useState(600);
 
+   useEffect(() => {
+     function handleResize() {
+       if (window.innerWidth > 900) {
+         setCarouselHeight(500);
+       } else if (window.innerWidth > 768) {
+         setCarouselHeight(300);
+       } else {
+         setCarouselHeight(250);
+       }
+
+     }
+
+     window.addEventListener("resize", handleResize);
+     handleResize();
+
+     return () => window.removeEventListener("resize", handleResize);
+   }, []);
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {data.map((slide, i) => {
         return (
-          <Carousel.Item key={i}>
+          <Carousel.Item
+            key={i}
+            style={{ height: `${carouselHeight}px`}}
+            className="container-fluid"
+          >
             <img
-              style={{ height: "600px" }}
-              className="d-block w-100"
+               style={{ width: "100%", display: "d-block", height: "100%"}}
               src={slide.image}
               alt="slider image"
             />
-            <Carousel.Caption>
+            {/* <Carousel.Caption>
               <h3>{slide.caption}</h3>
               <p>{slide.description}</p>
-            </Carousel.Caption>
+            </Carousel.Caption> */}
           </Carousel.Item>
         );
       })}
