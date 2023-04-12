@@ -1,31 +1,22 @@
 import "./App.css";
 import Navbar from "./components/homePage/Navbar";
-import Carousel from "./components/homePage/Carousel";
-import Footer from "./components/homePage/Footer";
-import Contents from "./components/homePage/Contents";
+import Login from "./components/Login_page/Login"
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Homepage from "./components/homePage/Homepage";
 
 function App() {
   return (
-    <div className="homepage">
-      <header>
+    <Router>
+    <div className="homepage">     
         <Navbar />
-      </header>
-      <main>
-        <h1 className="mb-3">Welcome to Research lab IITH</h1>
-        <h3 className="mb-3">Department of computer science</h3>
-
-        <div className="container-fluid">
-          <div className="row">
-            <Carousel />
-          </div>
-          <div className="row">
-            <Contents />
-          </div>
-
-        </div>
-      </main>
-      <Footer />
+      <Routes>
+      <Route exact path="/" element={<Homepage/>} />
+      <Route exact path="/login" element={<Login/>} />
+      </Routes>
+       
+      
     </div>
+    </Router>
   );
 }
 
