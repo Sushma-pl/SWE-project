@@ -8,8 +8,7 @@ export class Homepage extends Component {
     return (
       <div>
         <main>
-        <h1 className="mb-3">Welcome to Research lab IITH</h1>
-
+        <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
         <div className="container-0 mx-6" >
           <div className="row">
             <Carousel />
