@@ -10,7 +10,7 @@ export class Contents extends Component {
           <div className="col">
             <div className="card h-100">
               <div className="card-header bg-light">
-                <h2>News</h2>
+                <h2 >News</h2>
               </div>
 
               <div className="card-image">

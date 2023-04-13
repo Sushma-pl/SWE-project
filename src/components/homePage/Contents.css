@@ -6,30 +6,33 @@
   padding: 10px;
   position: relative;
   transition: 0.3s;
+}
+.card-header h2{
+  text-align: center;
+
 
 }
-.card-header{
-text-align: center;
+ @media (max-width: 1270px) and (min-width: 1104px) {
+  .card-header h2{
+    font-size: 1.5em !important;
+  }
 }
 .card:hover {
   transform: translateY(-15px);
   box-shadow: 0 30px 45px rgba(4, 4, 4, 0.2);
 }
-.card-footer{
-    text-align: right;
+.card-footer {
+  text-align: right;
 }
-.card a{
-    color: black;
-
+.card a {
+  color: black;
 }
-.card-body p:not(:last-child)  {
-    padding-bottom: 3%;
-    border-bottom: 1px solid #b1b1b1;
+.card-body p:not(:last-child) {
+  padding-bottom: 3%;
+  border-bottom: 1px solid #b1b1b1;
 }
-@media (max-width: 767px) {
+@media (max-width: 728px) {
   .card {
     height: 200px;
-
   }
-
 }
