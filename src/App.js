@@ -4,6 +4,7 @@ import Login from "./components/Login_page/Login"
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Homepage from "./components/homePage/Homepage";
 
+
 function App() {
   return (
     <Router>
@@ -13,9 +14,7 @@ function App() {
       <Route exact path="/" element={<Homepage/>} />
       <Route exact path="/login" element={<Login/>} />
       {/* here we can add another route to direct to appropriate page */}
-      </Routes>
-       
-      
+      </Routes>    
     </div>
     </Router>
   );
