@@ -1,9 +1,10 @@
 // import React,{useState} from 'react'
+import "font-awesome/css/font-awesome.min.css";
 import React , {Component} from "react";
+import { Link } from "react-router-dom";
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import "./Login.css";
-
-
-
 export class Login extends Component {
   render() {
     return (
@@ -11,7 +12,9 @@ export class Login extends Component {
       <div className="Auth-form-container">
         <form className="Auth-form">
           <div className="Auth-form-content">
-            <h3 className="Auth-form-title">Login In</h3>
+          <h3 className="Auth-form-title">
+          <i className='fas fa-user-circle icon-size'></i>
+          </h3>
             <div className="form-group mt-3">
               <label>Username</label>
               <input
@@ -39,7 +42,7 @@ export class Login extends Component {
               </label>
             </div>
             <span className="forgot-password text-left mt-2">
-               <a href="#">Forgot password?</a>
+               <Link  to="/login/forgot-password">Forgot password?</Link>
             </span>
           </div>
         </form>
