@@ -10,7 +10,7 @@ function App() {
       </header>
       <main>
         <h1 className="mb-3">Welcome to Research lab IITH</h1>
-        <centre><h3 className="mb-3">Conference Deadlines</h3></centre>
+        <center><h3 className="mb-3">Conference Deadlines</h3></center>
         <table class="table">
   <thead>
     <th>Conference</th>
