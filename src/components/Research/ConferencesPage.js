@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import Footer from "./Footer";
+import Footer from "../homePage/Footer";
+import "./ConferencesPage.css";
 export class ConferencesPage extends Component {
   render() {
     return (
       <div>
         <main>
         <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
-        <center><h3 className="mb-3">Conference Deadlines</h3></center>
+        <center><h3 className="mb-3 mt-5">Conference Deadlines</h3></center>
         <table class="table">
           <thead>
             <th>Conference</th>
