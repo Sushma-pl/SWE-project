@@ -24,7 +24,11 @@ function App() {
       <Route exact path="/research/conference" element={<ConferencesPage/>} />
       <Route exact path="/research/seminar" element={<SeminarsPage/>} />
       <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
-      <Route exact path="/login/change-password" element={<ChangePassword/>} />      
+      <Route exact path="/login/change-password" element={<ChangePassword/>} /> 
+      <Route exact path="/member/students" element={<Student/>} /> 
+      <Route exact path="/gallery/photos" element={<Photos/>} /> 
+      <Route exact path="/gallery/video" element={<Videos/>} /> 
+
       <Route exact path="/member/alumni" element={<Alumni/>} />  
       <Route exact path="/member/mentor" element={<Mentor/>} />      
 
