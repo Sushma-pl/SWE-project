@@ -13,18 +13,18 @@ export class ForgotPassword extends Component {
           Forgot Password
           </h3>
             
-            <div className="form-group">
+            <div className="form-group mt-3">
               <label>Username</label>
               <input
                 type="text"
-                className="form-control"
+                className="form-control mt-1"
                 placeholder="Enter username"
                 required
               />
               </div>
             
 
-            <div className="form-group">
+            <div className="form-group mt-3">
               <label>Institute Email-id</label>
               <input
                 type="email"
