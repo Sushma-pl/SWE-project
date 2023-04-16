@@ -7,10 +7,10 @@ import ConferencesPage from "./components/Research/ConferencesPage";
 import ForgotPassword from "./components/Login_page/ForgotPassword";
 import ChangePassword from "./components/Login_page/ChangePassword";
 import Mentor from "./components/Members/Mentor";
+import Alumni from "./components/Members/Alumni";
 import Photos from "./components/gallery/photos";
 import Videos from "./components/gallery/videos";
 import Student from "./components/Members/Student";
-
 
 function App() {
   return (
@@ -23,10 +23,12 @@ function App() {
       <Route exact path="/research/conference" element={<ConferencesPage/>} />
       <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
       <Route exact path="/login/change-password" element={<ChangePassword/>} />      
+      <Route exact path="/member/alumini" element={<Alumni/>} />  
       <Route exact path="/member/mentor" element={<Mentor/>} />      
       <Route exact path="/member/students" element={<Student/>} />   
       <Route exact path="gallery/photos" element={<Photos />} />
       <Route exact path="gallery/video" element={<Videos />} />   
+      
       {/* here we can add another route to direct to appropriate page */}
       </Routes>
      </div>    
