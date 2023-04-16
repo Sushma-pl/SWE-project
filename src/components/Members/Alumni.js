@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Footer from '../homePage/Footer'
-import image from './Picture/img.jpg'; 
+import image from './Picture/Image_1.jpg'; 
 import "./Alumni.css"
 
 export class Alumni extends Component {

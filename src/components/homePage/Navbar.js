@@ -33,7 +33,7 @@ export class Navbar extends Component {
                 <ul className="dropdown-menu">
                     <li><Link className="dropdown-item" to="/member/mentor">Mentor</Link></li>
                     <li><Link className="dropdown-item" to="/member/students">Students</Link></li>                    
-                    <li><Link className="dropdown-item" to="/member/alumini">Alumini</Link></li>                    
+                    <li><Link className="dropdown-item" to="/member/alumni">Alumini</Link></li>                    
                     <li><Link className="dropdown-item" to="/member/visitor">Visitor</Link></li>                                       
                 </ul>
                 </li>
