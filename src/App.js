@@ -7,9 +7,10 @@ import ConferencesPage from "./components/Research/ConferencesPage";
 import ForgotPassword from "./components/Login_page/ForgotPassword";
 import ChangePassword from "./components/Login_page/ChangePassword";
 import Mentor from "./components/Members/Mentor";
-import Student from "./components/Members/Student";
 import Photos from "./components/gallery/photos";
 import Videos from "./components/gallery/videos";
+import Student from "./components/Members/Student";
+
 
 function App() {
   return (
