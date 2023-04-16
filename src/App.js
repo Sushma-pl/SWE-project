@@ -12,6 +12,7 @@ import Alumni from "./components/Members/Alumni";
 import Photos from "./components/gallery/photos";
 import Videos from "./components/gallery/videos";
 import Student from "./components/Members/Student";
+import Visitor from "./components/Members/Visitor";
 import EditNavbar from "./components/Profile/EditNavbar";
 import AddConference from "./components/Profile/AddConference";
 import PostAnnouncement from "./components/Profile/PostAnnouncement";
@@ -36,7 +37,8 @@ function App() {
       <Route exact path="/gallery/photos" element={<Photos/>} /> 
       <Route exact path="/gallery/video" element={<Videos/>} /> 
       <Route exact path="/member/alumni" element={<Alumni/>} />  
-      <Route exact path="/member/mentor" element={<Mentor/>} />      
+      <Route exact path="/member/mentor" element={<Mentor/>} />       
+      <Route exact path="/member/visitor" element={<Visitor/>} />    
       <Route exact path="/profile" element={<EditNavbar/>} />      
       <Route exact path="/profile/add-conference" element={<AddConference/>} />      
       <Route exact path="/profile/post-announcement" element={<PostAnnouncement/>} />      
@@ -44,7 +46,7 @@ function App() {
       <Route exact path="/profile/upload-pictures" element={<UploadPictures/>} />      
       <Route exact path="/profile/add-visitor" element={<AddVisitor/>} />      
       <Route exact path="/profile/add-alumni" element={<AddAlumni/>} />      
-
+      
       {/* here we can add another route to direct to appropriate page */}
       </Routes>
      </div>    
