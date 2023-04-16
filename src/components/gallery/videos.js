@@ -1,295 +1,163 @@
 import React, { Component } from "react";
 import "./videos.css";
-import { Helmet } from "react-helmet";
+import Footer from "../homePage/Footer";
+
 class Videos extends Component {
   render() {
     return (
-      <div>
-        <Helmet>
-          <script src={require("./resource.js")}type="text/javascript" />
-        </Helmet>
-
-        <div className="block">
-          <div className="film-container">
-            <div className="row">
-              <div className="single-film wow fadeInDown" data-wow-delay=".1s">
-                <div
-                  className="box"
+      <div className="videos">
+        <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
+        <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
+        <h1 className="title">Gallery-Videos</h1>
+        <div className="container">
+          <h2>Title</h2>
+          {/* GRID */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(600px, 1fr))",
+              gridGap: "20px",
+            }}
+          >
+            {/* Video 1 */}
+            <div style={{ backgroundColor: "whitesmoke", padding: "15px" }}>
+              <h3
+                style={{
+                  borderBottom: "1px solid",
+                  margin: "0 0 8px 0",
+                  fontSize: "18px",
+                  fontWeight: 600,
+                }}
+              >
+                Caption
+              </h3>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <iframe
                   style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
                   }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="play-video">
-                    <video width="320" height="240" controls id="PlayVideo1">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                  <i
-                    className="video-tag-close ion-ios-close-outline"
-                    onClick={this.pauseVid1}
-                  ></i>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 1</p>
-                </div>
+                  src={require("./videoImages/video1.mp4")}
+                  title="Pine Siskin"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
               </div>
-
-              <div className="single-film wow fadeInDown" data-wow-delay=".2s">
-                <div
-                  className="box"
+            </div>
+            {/* Video 2 */}
+            <div style={{ backgroundColor: "whitesmoke", padding: "15px" }}>
+              <h3
+                style={{
+                  borderBottom: "1px solid",
+                  margin: "0 0 8px 0",
+                  fontSize: "18px",
+                  fontWeight: 600,
+                }}
+              >
+                Caption
+              </h3>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <iframe
                   style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
                   }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="play-video">
-                    <video width="320" height="240" controls id="PlayVideo2">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                  </div>
-                  <i
-                    className="video-tag-close ion-ios-close-outline"
-                    onClick={this.pauseVid2}
-                  ></i>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 2</p>
-                </div>
+                  src={require("./videoImages/video2.mp4")}
+                  title="Salmon Lifecycle with Ranger Tessa"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
               </div>
-
-              <div className="single-film wow fadeInDown" data-wow-delay=".3s">
-                <div
-                  className="box"
+            </div>
+            {/* Video 3 */}
+            <div style={{ backgroundColor: "whitesmoke", padding: "15px" }}>
+              <h3
+                style={{
+                  borderBottom: "1px solid",
+                  margin: "0 0 8px 0",
+                  fontSize: "18px",
+                  fontWeight: 600,
+                }}
+              >
+                Caption
+              </h3>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <iframe
                   style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
                   }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="play-video">
-                    <video width="320" height="240" controls id="PlayVideo3">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <i
-                      className="video-tag-close ion-ios-close-outline"
-                      onClick={this.pauseVid3}
-                    ></i>
-                  </div>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 3</p>
-                </div>
+                  src={require("./videoImages/video3.mp4")}
+                  title="Pacific Treefrog Calling"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
               </div>
-
-              <div className="single-film wow fadeInDown" data-wow-delay=".4s">
-                <div
-                  className="box"
+            </div>
+            {/* Video 4 */}
+            <div style={{ backgroundColor: "whitesmoke", padding: "15px" }}>
+              <h3
+                style={{
+                  borderBottom: "1px solid",
+                  margin: "0 0 8px 0",
+                  fontSize: "18px",
+                  fontWeight: 600,
+                }}
+              >
+                Caption
+              </h3>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                }}
+              >
+                <iframe
                   style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
                   }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div clasNamesName="play-video">
-                    <video width="320" height="240" controls id="PlayVideo4">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <i
-                      className="video-tag-close ion-ios-close-outline"
-                      onClick={this.pauseVid4}
-                    ></i>
-                  </div>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 4</p>
-                </div>
-              </div>
-
-              <div className="single-film wow fadeInDown" data-wow-delay=".5s">
-                <div
-                  className="box"
-                  style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
-                  }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="play-video">
-                    <video width="320" height="240" controls id="PlayVideo5">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <i
-                      className="video-tag-close ion-ios-close-outline"
-                      onClick={this.pauseVid5}
-                    ></i>
-                  </div>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 5</p>
-                </div>
-              </div>
-
-              <div className="single-film wow fadeInDown" data-wow-delay=".6s">
-                <div
-                  className="box"
-                  style={{
-                    background: require("https://upload.wikimedia.org/wikipedia/commons/7/70/Big.Buck.Bunny.-.Opening.Screen.png"),
-                  }}
-                >
-                  <div className="box__right box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__left box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__top box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="box__bottom box-pay-icon">
-                    <a href="javascript:;">
-                      <i className="play-movie-icon ion-ios-play-outline"></i>
-                    </a>
-                  </div>
-                  <div className="play-video">
-                    <video width="320" height="240" controls id="PlayVideo6">
-                      <source
-                        src="https://www.rmp-streaming.com/media/bbb-360p.mp4"
-                        type="video/mp4"
-                      />
-                    </video>
-                    <i
-                      className="video-tag-close ion-ios-close-outline"
-                      onClick={this.pauseVid6}
-                    ></i>
-                  </div>
-                </div>
-                <div className="film-information">
-                  <p>Big Buck Bunny</p>
-                  <p>Video Gallery 6</p>
-                </div>
+                  src={require("./videoImages/video4.mp4")}
+                  title="River Otters"
+                  allow="autoplay; encrypted-media"
+                  allowFullScreen
+                />
               </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

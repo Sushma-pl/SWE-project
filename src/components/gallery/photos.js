@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Footer from "../homePage/Footer";
 
-import "./photos.css"
+import "./photos.css";
 export class Photos extends Component {
   render() {
     return (
-      <body>
+      <div className="photos">
         <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
         <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
         <h1 className="page_title">Gallery-Photos</h1>
@@ -63,7 +63,7 @@ export class Photos extends Component {
           </div>
         </div>
         <Footer />
-      </body>
+      </div>
     );
   }
 }

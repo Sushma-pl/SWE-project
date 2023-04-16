@@ -3,7 +3,7 @@
 */
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,700");
-body {
+.photos {
   background-image: url("../homePage/images/background.jpg");
   color: #010818;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
