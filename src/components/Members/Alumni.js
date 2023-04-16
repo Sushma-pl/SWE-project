@@ -7,8 +7,8 @@ export class Alumni extends Component {
   render() {
     return (
         <div>
-        {/* <!-- ======= Team Section ======= --> */}
-     <section id="team" className="team alumni-bg">
+        {/* <!-- ======= alumni-team Section ======= --> */}
+     <section id="alumni-team" className="alumni-team alumni-bg">
         <div className="container">
   
           <div className="alumni-title">
@@ -20,7 +20,7 @@ export class Alumni extends Component {
   
             <div className="col-lg-6">
               <div className="member d-flex align-items-start" >
-                <div className="teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
+                <div className="alumni-teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
                 <div className="member-info">
                   <h4>V. Krishna Nandivada</h4>
                       <span>Phd Alumni</span>  
@@ -42,7 +42,7 @@ export class Alumni extends Component {
   
             <div className="col-lg-6">
               <div className="member d-flex align-items-start" >
-                <div className="teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
+                <div className="alumni-teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
                 <div className="member-info">
                   <h4>V. Krishna Nandivada</h4>
                       <span>Phd Alumni</span>  
@@ -64,7 +64,7 @@ export class Alumni extends Component {
   
             <div className="col-lg-6">
               <div className="member d-flex align-items-start" >
-                <div className="teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
+                <div className="alumni-teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
                 <div className="member-info">
                   <h4>V. Krishna Nandivada</h4>
                       <span>Phd Alumni</span>  
@@ -86,7 +86,7 @@ export class Alumni extends Component {
   
             <div className="col-lg-6">
               <div className="member d-flex align-items-start" >
-                <div className="teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
+                <div className="alumni-teampic"><img src={image} className="img-fluid rounded-circle" alt=""/></div>
                 <div className="member-info">
                   <h4>V. Krishna Nandivada</h4>
                       <span>Phd Alumni</span>  

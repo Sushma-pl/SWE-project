@@ -1,5 +1,5 @@
 
-.team .member {
+.alumni-team .member {
   position: relative;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -8,24 +8,24 @@
   margin-bottom: 15px;
   }
   
-  .team .member .teampic {
+  .alumni-team .member .alumni-teampic {
   overflow: hidden;
   width: 180px;
   border-radius: 50%;
   }
   
-  .team .member .member-info {
+  .alumni-team .member .member-info {
   padding-left: 30px;
   }
   
-  .team .member h4 {
+  .alumni-team .member h4 {
   font-weight: 700;
   margin-bottom: 5px;
   font-size: 20px;
   color: rgb(172, 27, 140);
   }
   
-  .team .member span {
+  .alumni-team .member span {
   display: block;
   font-size: 15px;
   padding-bottom: 10px;
@@ -33,7 +33,7 @@
   font-weight: 500;
   }
   
-  .team .member span::after {
+  .alumni-team .member span::after {
   content: "";
   position: absolute;
   display: block;
@@ -44,19 +44,19 @@
   left: 0;
   }
   
-  .team .member p {
+  .alumni-team .member p {
   margin: 10px 0 0 0;
   font-size: 14px;
   }
   
-  .team .member .social {
+  .alumni-team .member .social {
   margin-top: 12px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   }
   
-  .team .member .social a {
+  .alumni-team .member .social a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,21 +65,21 @@
   background: #eff2f8;
   }
   
-  .team .member .social a i {
+  .alumni-team .member .social a i {
   color: rgb(172, 27, 140);
   font-size: 16px;
   margin: 0 2px;
   }
   
-  .team .member .social a:hover {
+  .alumni-team .member .social a:hover {
   background: rgb(172, 27, 140);
   }
   
-  .team .member .social a:hover i {
+  .alumni-team .member .social a:hover i {
   color: #fff;
   }
   
-  .team .member .social a+a {
+  .alumni-team .member .social a+a {
   margin-left: 8px;
   }
   
