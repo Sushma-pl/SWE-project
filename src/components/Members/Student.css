@@ -1,5 +1,5 @@
 
-.team .member {
+.student-team .member {
     position: relative;
     box-shadow: 0px 2px 15px rgba(22, 47, 35, 0.1);
     padding: 30px;
@@ -7,7 +7,7 @@
     background: #fff;
     }
     
-    .team .member .teampic {
+    .student-team .member .student-teampic {
     overflow: hidden;
     width: 180px;
     border-radius: 50%;
@@ -34,23 +34,23 @@
     .styled:active {
         box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
     }
-    /* .team .member .teampic img {
+    /* .student-team .member .student-teampic img {
     transition: ease-in-out 0.3s;
     } */
     
     
-    .team .member .member-info {
+    .student-team .member .member-info {
     padding-left: 30px;
     }
     
-    .team .member h4 {
+    .student-team .member h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     color: rgb(39, 17, 235);
     }
     
-    .team .member span {
+    .student-team .member span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
@@ -58,7 +58,7 @@
     font-weight: 500;
     }
     
-    .team .member span::after {
+    .student-team .member span::after {
     content: "";
     position: absolute;
     display: block;
@@ -69,19 +69,19 @@
     left: 0;
     }
     
-    .team .member p {
+    .student-team .member p {
     margin: 10px 0 0 0;
     font-size: 18px;
     }
     
-    .team .member .social {
+    .student-team .member .social {
     margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     }
     
-    .team .member .social a {
+    .student-team .member .social a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,21 +90,21 @@
     background: #eff2f8;
     }
     
-    .team .member .social a i {
+    .student-team .member .social a i {
     color: rgb(38, 11, 209);
     font-size: 16px;
     margin: 0 2px;
     }
     
-    .team .member .social a:hover {
+    .student-team .member .social a:hover {
     background: tomato;
     }
     
-    .team .member .social a:hover i {
+    .student-team .member .social a:hover i {
     color: #fff;
     }
     
-    .team .member .social a+a {
+    .student-team .member .social a+a {
     margin-left: 8px;
     }
     
@@ -115,12 +115,13 @@
     
     
     
-    .section-title {
+    .student-title {
     text-align: center;
     padding-bottom: 30px;
+    margin-top: 30px;
     }
     
-    .section-title h2 {
+    .student-title h2 {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -138,7 +139,7 @@
         margin-top: -30px;
     }
    
-    .section-title p {
+    .student-title p {
     margin-top: 20px;
     }
     

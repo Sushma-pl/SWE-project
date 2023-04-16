@@ -7,6 +7,7 @@ import ConferencesPage from "./components/Research/ConferencesPage";
 import ForgotPassword from "./components/Login_page/ForgotPassword";
 import ChangePassword from "./components/Login_page/ChangePassword";
 import Mentor from "./components/Members/Mentor";
+import Student from "./components/Members/Student";
 
 
 
@@ -22,6 +23,7 @@ function App() {
       <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
       <Route exact path="/login/change-password" element={<ChangePassword/>} />      
       <Route exact path="/member/mentor" element={<Mentor/>} />      
+      <Route exact path="/member/students" element={<Student/>} />      
       {/* here we can add another route to direct to appropriate page */}
       </Routes>    
     </div>
