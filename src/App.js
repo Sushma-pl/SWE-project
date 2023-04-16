@@ -11,6 +11,7 @@ import Alumni from "./components/Members/Alumni";
 import Photos from "./components/gallery/photos";
 import Videos from "./components/gallery/videos";
 import Student from "./components/Members/Student";
+import Visitor from "./components/Members/Visitor";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
       <Route exact path="/member/alumini" element={<Alumni/>} />  
       <Route exact path="/member/mentor" element={<Mentor/>} />      
       <Route exact path="/member/students" element={<Student/>} />   
+      <Route exact path="/member/visitor" element={<Visitor/>} />   
       <Route exact path="gallery/photos" element={<Photos />} />
       <Route exact path="gallery/video" element={<Videos />} />   
       

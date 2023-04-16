@@ -1,5 +1,5 @@
 
-.team .visitor {
+.visitorteam .visitor {
     position: relative;
     box-shadow: 0px 2px 15px rgba(22, 47, 35, 0.1);
     padding: 30px;
@@ -7,7 +7,7 @@
     background: #fff;
     }
     
-    .team .visitor .visitorpic {
+    .visitorteam .visitor .visitorpic {
     overflow: hidden;
     width: 180px;
     border-radius: 50%;
@@ -34,23 +34,20 @@
     .styled:active {
         box-shadow: inset -2px -2px 3px rgba(255, 255, 255, 0.6), inset 2px 2px 3px rgba(0, 0, 0, 0.6);
     }
-    /* .team .member .teampic img {
-    transition: ease-in-out 0.3s;
-    } */
     
     
-    .team .visitor .visitor-info {
+    .visitorteam .visitor .visitor-info {
     padding-left: 30px;
     }
     
-    .team .visitor h4 {
+    .visitorteam .visitor h4 {
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     color: rgb(39, 17, 235);
     }
     
-    .team .visitor span {
+    .visitorteam .visitor span {
     display: block;
     font-size: 15px;
     padding-bottom: 10px;
@@ -58,7 +55,7 @@
     font-weight: 500;
     }
     
-    .team .visitor span::after {
+    .visitorteam .visitor span::after {
     content: "";
     position: absolute;
     display: block;
@@ -69,19 +66,19 @@
     left: 0;
     }
     
-    .team .visitor p {
+    .visitorteam .visitor p {
     margin: 10px 0 0 0;
     font-size: 18px;
     }
     
-    .team .visitor .social {
+    .visitorteam .visitor .social {
     margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     }
     
-    .team .visitor .social a {
+    .visitorteam .visitor .social a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -90,21 +87,21 @@
     background: #eff2f8;
     }
     
-    .team .visitor .social a i {
+    .visitorteam .visitor .social a i {
     color: rgb(38, 11, 209);
     font-size: 16px;
     margin: 0 2px;
     }
     
-    .team .visitor .social a:hover {
+    .visitorteam .visitor .social a:hover {
     background: tomato;
     }
     
-    .team .visitor .social a:hover i {
+    .visitorteam .visitor .social a:hover i {
     color: #fff;
     }
     
-    .team .visitor .social a+a {
+    .visitorteam .visitor .social a+a {
     margin-left: 8px;
     }
     
@@ -115,12 +112,12 @@
     
     
     
-    .section-title {
+    .vsection-title {
     text-align: center;
     padding-bottom: 30px;
     }
     
-    .section-title h2 {
+    .vsection-title h2 {
     font-size: 32px;
     font-weight: bold;
     text-transform: uppercase;
@@ -138,6 +135,6 @@
         margin-top: -30px;
     }
    
-    .section-title p {
+    .vsection-title p {
     margin-top: 20px;
     }
