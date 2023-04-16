@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import "./mentors.css";
-import image from './Picture/img.jpg'; 
+import image from './Picture/Image_1.jpg'; 
 import Footer from "../homePage/Footer";
 
 export class Mentor extends Component {
