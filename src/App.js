@@ -6,6 +6,8 @@ import Homepage from "./components/homePage/Homepage";
 import ConferencesPage from "./components/Research/ConferencesPage";
 import SeminarsPage from "./components/Research/SeminarsPage";
 import InventoryPage from "./components/Research/Inventorypage";
+import AwardsPage from "./components/Research/AwardsPage";
+import FacilitiesPage from "./components/Research/FacilitiesPage";
 import ForgotPassword from "./components/Login_page/ForgotPassword";
 import ChangePassword from "./components/Login_page/ChangePassword";
 import Mentor from "./components/Members/Mentor";
@@ -35,6 +37,8 @@ function App() {
       <Route exact path="/research/seminar" element={<SeminarsPage/>} />
       <Route exact path="/research/publications" element={<PublicationsPage/>} />
       <Route exact path="/research/inventry" element={<InventoryPage/>} />
+      <Route exact path="/research/awards" element={<AwardsPage/>} />
+      <Route exact path="/research/facilities" element={<FacilitiesPage/>} />
       <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
       <Route exact path="/login/change-password" element={<ChangePassword/>} /> 
       <Route exact path="/member/students" element={<Student/>} /> 
