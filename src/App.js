@@ -12,6 +12,7 @@ import Alumni from "./components/Members/Alumni";
 import Photos from "./components/gallery/photos";
 import Videos from "./components/gallery/videos";
 import Student from "./components/Members/Student";
+import PublicationsPage from "./components/Research/PublicationsPage";
 import Visitor from "./components/Members/Visitor";
 import EditNavbar from "./components/Profile/EditNavbar";
 import AddConference from "./components/Profile/AddConference";
@@ -31,6 +32,7 @@ function App() {
       <Route exact path="/login" element={<Login/>} />
       <Route exact path="/research/conference" element={<ConferencesPage/>} />
       <Route exact path="/research/seminar" element={<SeminarsPage/>} />
+      <Route exact path="/research/publications" element={<PublicationsPage/>} />
       <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
       <Route exact path="/login/change-password" element={<ChangePassword/>} /> 
       <Route exact path="/member/students" element={<Student/>} /> 
