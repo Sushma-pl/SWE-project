@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CarouselComponent from "./Carousel";
-import Footer from "./Footer";
+
 import Contents from "./Contents";
 
 export class Homepage extends Component {
@@ -18,7 +18,7 @@ export class Homepage extends Component {
             </div>
           </div>
         </main>
-        <Footer />
+        
       </div>
     );
   }

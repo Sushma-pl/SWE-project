@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Footer from "../homePage/Footer";
+
 import "./ConferencesPage.css";
 export class ConferencesPage extends Component {
   render() {
@@ -65,7 +65,7 @@ export class ConferencesPage extends Component {
               <td data-label="Location">California, USA</td>
               <td data-label="Core Rank">A*</td>
             </tr>
-            
+
             <tr>
               <td data-label="Conference">NOCS 2023</td>
               <td data-label="Abstract Date">Apr 14, 2023</td>
@@ -75,7 +75,7 @@ export class ConferencesPage extends Component {
               <td data-label="Location">Hamburg, Germany</td>
               <td data-label="Core Rank">&nbsp;</td>
             </tr>
-            
+
             <tr>
               <td data-label="Conference">ICPP 2023</td>
               <td data-label="Abstract Date">Apr 14, 2023</td>
@@ -85,7 +85,7 @@ export class ConferencesPage extends Component {
               <td data-label="Location">Utah, USA</td>
               <td data-label="Core Rank">A</td>
             </tr>
-            
+
             <tr>
               <td data-label="Conference">SAS 2023</td>
               <td data-label="Abstract Date">&nbsp;</td>
@@ -95,7 +95,7 @@ export class ConferencesPage extends Component {
               <td data-label="Location">Cascais, Portugal</td>
               <td data-label="Core Rank">B</td>
             </tr>
-            
+
             <tr>
               <td data-label="Conference">ICSME 2023</td>
               <td data-label="Abstract Date">Apr 20, 2023</td>
@@ -179,7 +179,7 @@ export class ConferencesPage extends Component {
           </table>
         </div>
       </main>
-      <Footer />
+      
       </div>
     )
   }

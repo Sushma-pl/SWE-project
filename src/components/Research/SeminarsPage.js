@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Footer from "../homePage/Footer";
+
 import "./SeminarsPage.css";
 
 export class SeminarsPage extends Component {
@@ -23,7 +23,7 @@ export class SeminarsPage extends Component {
             <li><span style={{color: 'rgb(255, 71, 71)'}}>2022-Sep-09: </span><span style={{color: '#0b22b3'}}>Weekly Seminar </span>by <span style={{color: '#0b22b3'}}>K C Sivaramakrishnan</span><br/><i>Linear Temporal Logic</i></li>
           </ul>
         </main>
-        <Footer />
+       
       </div>
     )
   }

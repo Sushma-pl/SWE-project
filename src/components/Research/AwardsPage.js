@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Footer from "../homePage/Footer";
 import "./SeminarsPage.css";
 
 export class AwardsPage extends Component {
@@ -18,7 +17,7 @@ export class AwardsPage extends Component {
             <li><span style={{color: 'rgb(255, 71, 71)'}}>2022-Nov-23: </span><span style={{color: '#0b22b3'}}>Best Paper Award </span>to <span style={{color: '#0b22b3'}}>Kasaraneni Ramya</span><br/><i>The student was awarded for best paper in the Conference on Implementation and Application of Automata, 2022</i></li>
           </ul>
         </main>
-        <Footer />
+
       </div>
     )
   }

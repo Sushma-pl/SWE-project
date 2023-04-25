@@ -1,6 +1,6 @@
 import "./PublicationsPage.css"
 import React, { Component } from 'react'
-import Footer from "../homePage/Footer";
+
 export default class InventoryPage extends Component {
   render() {
     return (
@@ -71,7 +71,7 @@ export default class InventoryPage extends Component {
 						</div>
 					</div>
         </main>
-        <Footer />
+       
       </div>
     )
   }

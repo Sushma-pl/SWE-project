@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import "./EditNavbar.css"
-import Footer from "../homePage/Footer";
+
 
 export class EditNavbar extends Component {
   render() {
@@ -146,7 +146,7 @@ export class EditNavbar extends Component {
             </form>
           </div>
         </div>
-        <Footer />
+        
       </div>
     );
   }

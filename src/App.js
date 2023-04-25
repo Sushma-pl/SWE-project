@@ -1,6 +1,7 @@
 import "./App.css";
 import Navbar from "./components/homePage/Navbar";
 import Login from "./components/Login_page/Login";
+import Footer from "./components/homePage/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./components/homePage/Homepage";
 import ConferencesPage from "./components/Research/ConferencesPage";
@@ -30,34 +31,67 @@ function App() {
     <Router>
       <div className="homepage">
         <Navbar />
-      <Routes>
-      <Route exact path="/" element={<Homepage/>} />
-      <Route exact path="/login" element={<Login/>} />
-      <Route exact path="/research/conference" element={<ConferencesPage/>} />
-      <Route exact path="/research/seminar" element={<SeminarsPage/>} />
-      <Route exact path="/research/publications" element={<PublicationsPage/>} />
-      <Route exact path="/research/inventry" element={<InventoryPage/>} />
-      <Route exact path="/research/awards" element={<AwardsPage/>} />
-      <Route exact path="/research/facilities" element={<FacilitiesPage/>} />
-      <Route exact path="/login/forgot-password" element={<ForgotPassword/>} />
-      <Route exact path="/login/change-password" element={<ChangePassword/>} /> 
-      <Route exact path="/member/students" element={<Student/>} /> 
-      <Route exact path="/gallery/photos" element={<Photos/>} /> 
-      <Route exact path="/gallery/video" element={<Videos/>} /> 
-      <Route exact path="/member/alumni" element={<Alumni/>} />  
-      <Route exact path="/member/mentor" element={<Mentor/>} />       
-      <Route exact path="/member/visitor" element={<Visitor/>} />    
-      <Route exact path="/profile" element={<EditNavbar/>} />      
-      <Route exact path="/profile/add-conference" element={<AddConference/>} />      
-      <Route exact path="/profile/post-announcement" element={<PostAnnouncement/>} />      
-      <Route exact path="/profile/post-news" element={<PostNews/>} />      
-      <Route exact path="/profile/upload-pictures" element={<UploadPictures/>} />      
-      <Route exact path="/profile/add-visitor" element={<AddVisitor/>} />      
-      <Route exact path="/profile/add-alumni" element={<AddAlumni/>} />      
-      
-      {/* here we can add another route to direct to appropriate page */}
-      </Routes>
-     </div>    
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/login" element={<Login />} />
+          <Route
+            exact
+            path="/research/conference"
+            element={<ConferencesPage />}
+          />
+          <Route exact path="/research/seminar" element={<SeminarsPage />} />
+          <Route
+            exact
+            path="/research/publications"
+            element={<PublicationsPage />}
+          />
+          <Route exact path="/research/inventry" element={<InventoryPage />} />
+          <Route exact path="/research/awards" element={<AwardsPage />} />
+          <Route
+            exact
+            path="/research/facilities"
+            element={<FacilitiesPage />}
+          />
+          <Route
+            exact
+            path="/login/forgot-password"
+            element={<ForgotPassword />}
+          />
+          <Route
+            exact
+            path="/login/change-password"
+            element={<ChangePassword />}
+          />
+          <Route exact path="/member/students" element={<Student />} />
+          <Route exact path="/gallery/photos" element={<Photos />} />
+          <Route exact path="/gallery/video" element={<Videos />} />
+          <Route exact path="/member/alumni" element={<Alumni />} />
+          <Route exact path="/member/mentor" element={<Mentor />} />
+          <Route exact path="/member/visitor" element={<Visitor />} />
+          <Route exact path="/profile" element={<EditNavbar />} />
+          <Route
+            exact
+            path="/profile/add-conference"
+            element={<AddConference />}
+          />
+          <Route
+            exact
+            path="/profile/post-announcement"
+            element={<PostAnnouncement />}
+          />
+          <Route exact path="/profile/post-news" element={<PostNews />} />
+          <Route
+            exact
+            path="/profile/upload-pictures"
+            element={<UploadPictures />}
+          />
+          <Route exact path="/profile/add-visitor" element={<AddVisitor />} />
+          <Route exact path="/profile/add-alumni" element={<AddAlumni />} />
+
+          {/* here we can add another route to direct to appropriate page */}
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   );
 }

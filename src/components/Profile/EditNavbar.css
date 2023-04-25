@@ -113,7 +113,7 @@ a {
 
 }
 .profile{
-  /* position: absolute; */
+
   top: 100px;
   bottom: auto;
   left: 0;
@@ -121,16 +121,16 @@ a {
   min-height: 100%;
   height: auto;
   width: 50% !important;
-  /* width: 75%; */
+
   margin: 20px auto;
   margin-bottom: 100px;
-  background-color: #fff;
-  border-top: 5px solid #4539cb;
+  background-color: transparent;
+  border: 2px solid #4539cb;
   border-radius: 0 0 5px 5px;
-  box-shadow: 0 2.5px 5px #ccc;
+  box-shadow: 0 2.5px 5px transparent;
 }
 .content{
-  /* position: absolute; */
+
   min-height: 100%;
   height: 100%;
   width: 95%;
@@ -139,14 +139,13 @@ a {
   right: 0;
   top: 0;
   bottom: 0;
-  /*border: 1px solid #eee;*/
-  /*background-color: yellow;*/
+
   overflow: hidden;
 }
 
 .details{
   width: 97.5%;
-  /*background-color: red;*/
+
   margin: 2.5px auto;
 }
 
@@ -188,14 +187,14 @@ span.photo:hover:after{
   color: #fff;
 }
 input[type="file"]{
-  /* position: absolute; */
+
   color: #555;
   font-size: 80%;
   top: 25%;
   box-shadow: none !important;
   margin-left: 0 !important;
    margin-right: 45% !important;
-  background-color: #ededed;
+  background-color: transparent;
   width: 30%;
   border: 0;
 
@@ -203,7 +202,7 @@ input[type="file"]{
 
 span.name,span.links > h3,h4{
   font-family: Lato;
-  /*font-weight: 200;*/
+
 }
 span.name{
   position: absolute;
@@ -221,12 +220,11 @@ label[for="avatar"]{
   line-height: 120px;
 }
 .input.btn{
-  /* position: absolute; */
+
   top: 45%;
   left: 25%;
-  /* color: #fff; */
-  /* background-color: rgba(57,203,88,0.65); */
-  background-color: #ddd;
+  color: #fff;
+
   padding: 10px 15px;
   border-radius: 3px;
   box-shadow: inset 0 0 0 2px #4539cb;
@@ -238,7 +236,7 @@ span.btn:hover{
   opacity: 1;
   color: #fff;
   background-color: #4539cb;
-  /* background-color: #39cb58; */
+
 }
 .profile:hover .btn{
     opacity: 1;
@@ -246,13 +244,11 @@ span.btn:hover{
 
 
 
-/*Input Fields Styles
-=========================*/
 fieldset textarea,input{
   font-family: Open Sans;
   font-size: 15px;
   color: #333;
-  background-color: #f7f7f7;
+  background-color: transparent;
   box-shadow: 0 0 0 1px #4539cb;
   padding: 5px;
   width: 75%;
@@ -268,7 +264,7 @@ fieldset textarea{
 }
 fieldset textarea:hover,input:hover{
   box-shadow: 0 0 0 1px #4539cb;
-  background-color: #fff;
+  background-color:  rgba(169, 170, 249, 0.192);
 }
 fieldset textarea:focus,input:focus{
   box-shadow: 0 0 0 1px #4539cb,
@@ -280,7 +276,7 @@ fieldset textarea:focus,input:focus{
   float: left;
   font-weight: 500;
   color: #333;
-  /* text-align: left; */
+
 }
 .grid-65{
   position: relative;
@@ -293,30 +289,18 @@ fieldset textarea:focus,input:focus{
 
 
 
-/* Edit View
-======================*/
 .content h1{
   text-align: center;
   color: #555;
   font-family: Lato;
   font-size: 40px;
-  /* font-weight: 200; */
+
   margin: 5px auto 15px auto;
 }
-select{
-  width: 80%;
-  padding: 7px 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #4539cb;
-  border-radius: 2.5px;
-  outline: 0;
-}
-select option{
-  padding: 5px;
-}
+
 fieldset{
   text-align: center;
-  /* background-color: rgba(0,0,0,0.01); */
+
   margin-bottom: 5px;
   padding: 5px;
   box-sizing: border-box;
@@ -326,6 +310,7 @@ fieldset:last-child{
   border-bottom: none;
 }
 .buttons{
+
    display: flex;
   justify-content: space-evenly;
 }
@@ -334,10 +319,10 @@ input.Btn{
   float: left;
   display: block;
    margin: 40px auto;
-  /* margin-left: 1%;  */
+
   padding: 15px 0;
   font-size: 16px;
-  color: #fff;
+  color: white;
   cursor: pointer;
   background-color: rgba(39, 116, 238, 0.65);
   box-shadow: inset 0 0 0 2px #4539cb,
@@ -350,44 +335,9 @@ input.Btn:hover{
   background-color: #4539cb;
 }
 
-/* Header Bar
-===========================*/
-.navbar{
-  padding: 10px;
-  box-shadow: 0 2.5px 10px rgba(0,0,0,0.5);
-}
-div.logo{
-/*    margin: 0 auto;*/
-/*    text-align: center;*/
-    font-size: 30px;
-    font-family:"Source Sans Pro";
-    color:#4539cb;
-    width: 100%;
-/*    display: inline-block;*/
-    /*    position: absolute;*/
-/*    top:0px;*/
-/*    left:0;*/
-    right: 0;
-    z-index: 2;
-}
-span.logo-part{
-    color:#fff;
-    background-color: #4539cb;
-    padding: 2px 5.5px 0px 10px;
-    border-radius:100%;
-    margin-bottom:15px;
-    font-family: "Montez";
-}
-.search{
-/*    margin-top:5px;
-/*    border:0;*/
-    float: left;
-    position: relative;
-    top:4px;
-    right: 100px;
-    padding-bottom: 0;
-}
-@media only screen and (min-width: 320px) and (max-width: 520px){ /*Phone*/
+
+
+@media only screen and (min-width: 320px) and (max-width: 520px){
   .profile{
     width: 90% !important;
   }

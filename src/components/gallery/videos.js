@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./videos.css";
-import Footer from "../homePage/Footer";
 
 class Videos extends Component {
   render() {
@@ -157,7 +156,6 @@ class Videos extends Component {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     );
   }

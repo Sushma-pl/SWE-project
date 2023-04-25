@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import "./Visitor.css"
 import image1 from "./Picture/Image_1.jpg"
 import image2 from "./Picture/Image_2.jpg"
-import Footer from '../homePage/Footer'
+
 
 export class Visitor extends Component {
   render() {
@@ -10,14 +10,14 @@ export class Visitor extends Component {
       <div>
         <section id="visitorteam" className="visitorteam section-bg">
         <div className="container">
-  
+
           <div className="vsection-title">
             <h2>VISITORS</h2>
             <div className="underline"></div>
           </div>
-  
+
           <div className="row">
-  
+
             <div className="col-lg-6">
               <div className="visitor d-flex align-items-start" >
                 <div className="visitorpic"><img src={image1} className="img-fluid" alt=""/></div>
@@ -34,7 +34,7 @@ export class Visitor extends Component {
                 </div>
               </div>
             </div>
-  
+
             <div className="col-lg-6 mt-4 mt-lg-0">
               <div className="visitor d-flex align-items-start" >
                 <div className="visitorpic"><img src={image2} className="img-fluid" alt=""/></div>
@@ -51,12 +51,12 @@ export class Visitor extends Component {
                 </div>
               </div>
             </div>
-  
+
         </div>
-  
+
         </div>
       </section>
-      <Footer/>
+     
       </div>
     )
   }

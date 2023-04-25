@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Footer from "../homePage/Footer";
+
 import "./ConferencesPage.css";
 export class FacilitiesPage extends Component {
   render() {
@@ -55,7 +55,7 @@ export class FacilitiesPage extends Component {
               <td data-label="Description">Computing Server</td>
               <td data-label="Location">A-007</td>
             </tr>
-            
+
             <tr>
               <td data-label="Equipment">Workstations</td>
               <td data-label="Quantity">35</td>
@@ -63,7 +63,7 @@ export class FacilitiesPage extends Component {
               <td data-label="Description">Workstations</td>
               <td data-label="Location">A-613</td>
             </tr>
-            
+
             <tr>
               <td data-label="Equipment">Rack Mount Server</td>
               <td data-label="Quantity">1</td>
@@ -71,7 +71,7 @@ export class FacilitiesPage extends Component {
               <td data-label="Description">GPU Computing</td>
               <td data-label="Location">Data Centre</td>
             </tr>
-            
+
             <tr>
               <td data-label="Equipment">Server</td>
               <td data-label="Quantity">4</td>
@@ -79,7 +79,7 @@ export class FacilitiesPage extends Component {
               <td data-label="Description">Server</td>
               <td data-label="Location">Data Centre</td>
             </tr>
-            
+
             <tr>
               <td data-label="Equipment">DGX-1</td>
               <td data-label="Quantity">4</td>
@@ -99,7 +99,7 @@ export class FacilitiesPage extends Component {
           </table>
         </div>
       </main>
-      <Footer />
+     
       </div>
     )
   }

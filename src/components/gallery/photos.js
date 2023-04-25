@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Footer from "../homePage/Footer";
+
 
 import "./photos.css";
 export class Photos extends Component {
@@ -62,7 +62,7 @@ export class Photos extends Component {
             </div>
           </div>
         </div>
-        <Footer />
+        
       </div>
     );
   }
