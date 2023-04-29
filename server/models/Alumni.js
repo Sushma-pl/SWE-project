@@ -26,6 +26,12 @@ const AlumniSchema = new Schema({
     },
     present_position: {
       type: String
+    },
+    linkedin: {
+      type: String
+    },
+    gs: {
+      type: String
     }
   });
   

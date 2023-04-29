@@ -1,15 +1,16 @@
 const express = require('express');
 const connectDB = require('./config/db');
-
+const cors = require('cors');
 const app = express();
 
 // Connect Database
 connectDB();
 
 app.use(express.json())
+app.use(cors());
 
 // Available routes 
-app.use('/api/alumni',require('./routes/api/alumni'))
+app.use('/member/alumni',require('./routes/member/alumni'))
 
 
 //previous work

@@ -10,7 +10,7 @@ const Alumni  = require('../../models/Alumni');
 // @route GET api/alumni/test
 // @description tests alumni route
 // @access Public
-router.get('/test', (req, res) => {
+router.get('/', (req, res) => {
   Alumni.find()
   .then(alumni => res.json(alumni))
   .catch(err => res.status(404).json({ noalumnifound: 'No Books found' }));
