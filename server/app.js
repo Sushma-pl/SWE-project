@@ -10,8 +10,8 @@ app.use(express.json())
 app.use(cors());
 
 // Available routes 
-app.use('/member/alumni',require('./routes/member/alumni'))
-
+app.use('/member/alumni',require('./routes/member/alumni'));
+app.use('/research/conference',require('./routes/research/conference'));
 
 //previous work
 app.get('/', (req, res) => res.send('Hello world!'));

@@ -1,7 +1,42 @@
 import React, { Component } from 'react'
-
+import axios from 'axios';
 import "./ConferencesPage.css";
+
+const Conferencee = props => (
+  <tr>
+    <td data-label="Conference">{props.conference.name}</td>
+    <td data-label="Abstract Date">{props.conference.abstract_date}</td>
+    <td data-label="Submission Date">{props.conference.submission_date}</td>
+    <td data-label="Notification Date">{props.conference.notification_date}</td>
+    <td data-label="Event Date">{props.conference.event_date}</td>
+    <td data-label="Location">{props.conference.location}</td>
+    <td data-label="Core Rank">{props.conference.core_rank}</td>
+  </tr>
+)
+
 export class ConferencesPage extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {conferences: []};
+  }
+
+  componentDidMount() {
+    axios.get('http://localhost:5000/research/conference/')
+      .then(response => {
+        this.setState({ conferences: response.data })
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
+  ConferenceList() {
+    return this.state.conferences.map(currentConference => {
+      return <Conferencee conference={currentConference} />;
+    })
+  }
+
   render() {
     return (
       <div>
@@ -26,7 +61,21 @@ export class ConferencesPage extends Component {
         <div className="tbl-content">
           <table cellpadding="0" cellspacing="0" border="0">
             <tbody>
-            <tr>
+              {this.ConferenceList()}
+            </tbody>
+          </table>
+        </div>
+      </main>
+      
+      </div>
+    )
+  }
+}
+
+export default ConferencesPage
+
+/*
+<tr>
               <td data-label="Conference">OOPSLA(2)2023</td>
               <td data-label="Abstract Date">&nbsp;</td>
               <td data-label="Submission Date">Apr 14, 2023</td>
@@ -175,14 +224,4 @@ export class ConferencesPage extends Component {
               <td data-label="Location">Taipei, Taiwan</td>
               <td data-label="Core Rank">B</td>
             </tr>
-            </tbody>
-          </table>
-        </div>
-      </main>
-      
-      </div>
-    )
-  }
-}
-
-export default ConferencesPage
+*/

@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
 import image from './Picture/Image_1.jpg'
 import axios from 'axios';
 import "./Alumni.css"
@@ -46,7 +45,6 @@ export default class Alumni extends Component {
   }
 
   AlumniList() {
-    console.log("Hello");
     return this.state.alumnis.map(currentAlumni => {
       return <Alumnii alumni={currentAlumni} />;
     })
