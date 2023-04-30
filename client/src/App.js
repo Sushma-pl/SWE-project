@@ -20,7 +20,7 @@ import PublicationsPage from "./components/Research/PublicationsPage";
 import Visitor from "./components/Members/Visitor";
 import EditNavbar from "./components/Profile/EditNavbar";
 import AddConference from "./components/Profile/AddConference";
-import PostAnnouncement from "./components/Profile/PostAnnouncement";
+import AddSeminar from "./components/Profile/AddSeminar";
 import PostNews from "./components/Profile/PostNews";
 import UploadPictures from "./components/Profile/UploadPictures";
 import AddVisitor from "./components/Profile/AddVisitor";
@@ -76,8 +76,8 @@ function App() {
           />
           <Route
             exact
-            path="/profile/post-announcement"
-            element={<PostAnnouncement />}
+            path="/profile/add-seminar"
+            element={<AddSeminar />}
           />
           <Route exact path="/profile/post-news" element={<PostNews />} />
           <Route

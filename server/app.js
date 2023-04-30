@@ -12,6 +12,7 @@ app.use(cors());
 // Available routes 
 app.use('/member/alumni',require('./routes/member/alumni'));
 app.use('/research/conference',require('./routes/research/conference'));
+app.use('/research/seminar',require('./routes/research/seminar'));
 
 //previous work
 app.get('/', (req, res) => res.send('Hello world!'));

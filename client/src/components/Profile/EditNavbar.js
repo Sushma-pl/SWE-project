@@ -19,7 +19,7 @@ export class EditNavbar extends Component {
                 <Link to="/profile/add-conference"> Add Conference</Link>
               </li>
               <li>
-                <Link to="/profile/post-announcement"> Post Announcement</Link>
+                <Link to="/profile/add-seminar"> Add Seminar</Link>
               </li>
               <li>
                 <Link to="/profile/post-news"> Post News</Link>

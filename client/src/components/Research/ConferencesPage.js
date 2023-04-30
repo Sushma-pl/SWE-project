@@ -75,26 +75,6 @@ export class ConferencesPage extends Component {
 export default ConferencesPage
 
 /*
-<tr>
-              <td data-label="Conference">OOPSLA(2)2023</td>
-              <td data-label="Abstract Date">&nbsp;</td>
-              <td data-label="Submission Date">Apr 14, 2023</td>
-              <td data-label="Notification Date">Jun 30, 2023</td>
-              <td data-label="Event Date">Nov 14-29, 2023</td>
-              <td data-label="Location">Lisbon, Portugal</td>
-              <td data-label="Core Rank">A</td>
-            </tr>
-
-            <tr>
-              <td data-label="Conference">PACT 2023</td>
-              <td data-label="Abstract Date">Mar 25, 2023</td>
-              <td data-label="Submission Date">Apr 15, 2023</td>
-              <td data-label="Notification Date">Aug 15, 2023</td>
-              <td data-label="Event Date">Oct 21-25, 2023</td>
-              <td data-label="Location">Vienna, Austria</td>
-              <td data-label="Core Rank">B</td>
-            </tr>
-
             <tr>
               <td data-label="Conference">NDSS 2024</td>
               <td data-label="Abstract Date">&nbsp;</td>
