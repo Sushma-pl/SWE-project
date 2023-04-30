@@ -21,7 +21,7 @@ import Visitor from "./components/Members/Visitor";
 import EditNavbar from "./components/Profile/EditNavbar";
 import AddConference from "./components/Profile/AddConference";
 import AddSeminar from "./components/Profile/AddSeminar";
-import PostNews from "./components/Profile/PostNews";
+import AddAward from "./components/Profile/AddAward";
 import UploadPictures from "./components/Profile/UploadPictures";
 import AddVisitor from "./components/Profile/AddVisitor";
 import AddAlumni from "./components/Profile/AddAlumni";
@@ -79,7 +79,7 @@ function App() {
             path="/profile/add-seminar"
             element={<AddSeminar />}
           />
-          <Route exact path="/profile/post-news" element={<PostNews />} />
+          <Route exact path="/profile/add-award" element={<AddAward />} />
           <Route
             exact
             path="/profile/upload-pictures"

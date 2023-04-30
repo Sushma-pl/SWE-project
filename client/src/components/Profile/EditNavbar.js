@@ -22,7 +22,7 @@ export class EditNavbar extends Component {
                 <Link to="/profile/add-seminar"> Add Seminar</Link>
               </li>
               <li>
-                <Link to="/profile/post-news"> Post News</Link>
+                <Link to="/profile/add-award"> Add Award</Link>
               </li>
               <li>
                 <Link to="/profile/upload-pictures">

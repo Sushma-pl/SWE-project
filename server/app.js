@@ -13,6 +13,7 @@ app.use(cors());
 app.use('/member/alumni',require('./routes/member/alumni'));
 app.use('/research/conference',require('./routes/research/conference'));
 app.use('/research/seminar',require('./routes/research/seminar'));
+app.use('/research/award',require('./routes/research/award'));
 
 //previous work
 app.get('/', (req, res) => res.send('Hello world!'));
