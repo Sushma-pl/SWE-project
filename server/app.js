@@ -17,6 +17,7 @@ app.use('/member/visitor',require('./routes/member/visitor'));
 app.use('/research/conference',require('./routes/research/conference'));
 app.use('/research/seminar',require('./routes/research/seminar'));
 app.use('/research/award',require('./routes/research/award'));
+app.use('/research/publication',require('./routes/research/publication'));
 
 //previous work
 app.get('/', (req, res) => res.send('Hello world!'));

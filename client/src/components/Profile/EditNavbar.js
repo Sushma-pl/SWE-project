@@ -25,6 +25,9 @@ export class EditNavbar extends Component {
                 <Link to="/profile/add-award"> Add Award</Link>
               </li>
               <li>
+                <Link to="/profile/add-publication"> Add Publication</Link>
+              </li>
+              <li>
                 <Link to="/profile/upload-pictures">
                   {" "}
                   Upload Pictures to Gallery
