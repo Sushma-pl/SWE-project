@@ -1,7 +1,43 @@
 import "./PublicationsPage.css"
 import React, { Component } from 'react'
+import axios from 'axios';
+
+const Publicationn = props => (
+  <div className="accordion-item">
+		<h2 className="accordion-header" id={props.heading}>
+			<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={props.hash} aria-expanded="false" aria-controls={props.collapse}>
+				{props.publication.title}
+			</button>
+		</h2>
+		<div id={props.collapse} className="accordion-collapse collapse" aria-labelledby={props.heading} data-bs-parent="#accordionFlushExample">
+			<div className="accordion-body"><i>{props.publication.authors}<br/>{props.publication.journal_or_conference}</i></div>
+		</div>
+	</div>
+)
 
 export default class PublicationsPage extends Component {
+
+	constructor(props) {
+    super(props);
+    this.state = {publications: []};
+  }
+
+	componentDidMount() {
+    axios.get('http://localhost:5000/research/publication/')
+      .then(response => {
+        this.setState({ publications: response.data })
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }
+
+	PublicationList() {
+		return this.state.publications.map((currentConference,ind) => {
+      return <Publicationn publication={currentConference} heading={"h"+ind} collapse={"c"+ind} hash={"#c"+ind}/>;
+    })
+  }
+
   render() {
     return (
       <div>
@@ -9,8 +45,27 @@ export default class PublicationsPage extends Component {
           <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
           <center><h3 className="mb-3 mt-5">Publications</h3></center>
           <div className="accordion accordion-flush" id="accordionFlushExample">
-						<div className="accordion-item">
-							<h2 className="accordion-header" id="flush-headingOne">
+						{this.PublicationList()}
+					</div>
+        </main>
+      </div>
+    )
+  }
+}
+
+/*
+<div className="accordion-item">
+		<h2 className="accordion-header" id={props.heading}>
+			<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={props.hash} aria-expanded="false" aria-controls={props.collapse}>
+				{props.publication.title}
+			</button>
+		</h2>
+		<div id={props.collapse} className="accordion-collapse collapse" aria-labelledby={props.heading} data-bs-parent="#accordionFlushExample">
+			<div className="accordion-body"><i>{props.publication.authors}<br/>{props.publication.journal_or_conference}</i></div>
+		</div>
+	</div>
+<div className="accordion-item">
+							<h2 className="accordion-header" id="flush-headingOn">
 								<button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
 									Multi Interval DomLock (MID): Towards Improving Concurrency in Hierarchies
 								</button>
@@ -69,10 +124,4 @@ export default class PublicationsPage extends Component {
 								<div className="accordion-body"><i>Author(s): S.R. Swamy Saranam Chongala, Sumitha George, Hariram Thirucherai Govind, Jagadish Kotra, Madhu Mutyam, John Samson, Mahmut Kandemir, Vijaykrishnan Narayanan<br/>Journal/Conference: International Conference on Compilers, Architectures, and Synthesis for Embedded Systems (CASES), Sep 20-25, 2020</i></div>
 							</div>
 						</div>
-					</div>
-        </main>
-        
-      </div>
-    )
-  }
-}
+*/

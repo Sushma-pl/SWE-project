@@ -28,6 +28,7 @@ export class AwardsPage extends Component {
       return <Awardd award={currentAward} />;
     })
   }
+  
   render() {
     return (
       <div>

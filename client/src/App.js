@@ -22,6 +22,7 @@ import EditNavbar from "./components/Profile/EditNavbar";
 import AddConference from "./components/Profile/AddConference";
 import AddSeminar from "./components/Profile/AddSeminar";
 import AddAward from "./components/Profile/AddAward";
+import AddPublication from "./components/Profile/AddPublication";
 import UploadPictures from "./components/Profile/UploadPictures";
 import AddVisitor from "./components/Profile/AddVisitor";
 import AddAlumni from "./components/Profile/AddAlumni";
@@ -80,6 +81,7 @@ function App() {
             element={<AddSeminar />}
           />
           <Route exact path="/profile/add-award" element={<AddAward />} />
+          <Route exact path="/profile/add-publication" element={<AddPublication />} />
           <Route
             exact
             path="/profile/upload-pictures"

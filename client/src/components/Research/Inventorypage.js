@@ -7,7 +7,7 @@ export default class InventoryPage extends Component {
       <div>
         <main>
           <h1 className="place-holder-nav-bar">Welcome to Research lab IITH</h1>
-          <center><h3 className="mb-3 mt-5">Publications</h3></center>
+          <center><h3 className="mb-3 mt-5">Inventory</h3></center>
           <div className="accordion accordion-flush" id="accordionFlushExample">
 						<div className="accordion-item">
 							<h2 className="accordion-header" id="flush-headingOne">
