@@ -14,8 +14,6 @@ router.get('/', (req, res) => {
   Alumni.find()
   .then(alumni => res.json(alumni))
   .catch(err => res.status(404).json({ noalumnifound: 'No Alumni found' }));
-  // console.log(req.body);
-  // res.send('alumni route testing!')
  });
 
 // create a new alumni
