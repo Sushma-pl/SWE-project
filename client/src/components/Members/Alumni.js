@@ -15,13 +15,13 @@ const Alumnii = props => (
               <p className='fs-6'>
                 <b>Mentor:</b>  {props.alumni.mentor} <br />
                 <b>Thesis:</b> {props.alumni.thesis} <br />
-                <b>Graduation year:</b> {props.alumni.year} <br />
+                <b>Graduation year:</b> {props.alumni.graduation_year} <br />
                 <b>Current Position:</b> {props.alumni.present_position}
             </p>
             </div>
         <div className="social">
-          <a href={props.alumni.linkedin}><i className="fab fa-google scholar"></i></a>
-          <a href={props.alumni.gs}><i className="bi bi-linkedin"></i></a>
+          <a href={props.alumni.gs}><i className="fab fa-google scholar"></i></a>
+          <a href={props.alumni.linkedin}><i className="bi bi-linkedin"></i></a>
         </div>
       </div>
     </div>

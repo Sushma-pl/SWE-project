@@ -13,13 +13,13 @@ const Alumni  = require('../../models/Alumni');
 router.get('/', (req, res) => {
   Alumni.find()
   .then(alumni => res.json(alumni))
-  .catch(err => res.status(404).json({ noalumnifound: 'No Books found' }));
+  .catch(err => res.status(404).json({ noalumnifound: 'No Alumni found' }));
   // console.log(req.body);
   // res.send('alumni route testing!')
  });
 
 // create a new alumni
-router.post('/add-alumni',[
+router.post('/add',[
     body('name').isLength({ min: 5 }),
 ], (req, res) => {
     const errors = validationResult(req);
@@ -35,6 +35,8 @@ router.post('/add-alumni',[
       thesis: req.body.thesis,
       graduation_year: req.body.graduation_year,
       present_position: req.body.present_position,
+      linkedin: req.body.linkedin,
+      gs: req.body.gs
   }).then(alumni => res.json(alumni));
   
   // can write a delete-alumni part also 

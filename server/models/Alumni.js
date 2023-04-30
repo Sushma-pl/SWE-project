@@ -21,8 +21,7 @@ const AlumniSchema = new Schema({
       type: String
     },
     graduation_year: {
-      type: Date,
-      default: Date.now
+      type: String
     },
     present_position: {
       type: String
