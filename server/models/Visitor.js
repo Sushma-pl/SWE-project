@@ -14,8 +14,11 @@ const VisitorSchema = new Schema({
 
     
     visit_date: {
-      type: Date,
-      default: Date.now
+      type: String
+    },
+
+    website: {
+      type: String
     }
   });
   

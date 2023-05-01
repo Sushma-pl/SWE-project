@@ -30,8 +30,8 @@ router.post('/add',[
       name: req.body.name,
       mentor: req.body.mentor,
       email: req.body.email,
-      research_area: req.body.research_area
-
+      research_area: req.body.research_area,
+      website: req.body.website
   }).then(student => res.json(student));
   
   // can write a delete-student part also 

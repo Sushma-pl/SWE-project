@@ -21,6 +21,10 @@ const StudentSchema = new Schema({
     email: {
       type: String,
       required: true
+    },
+
+    website: {
+      type: String
     }
     
   });

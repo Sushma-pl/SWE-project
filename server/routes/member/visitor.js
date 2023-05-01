@@ -29,7 +29,8 @@ router.post('/add',[
     Visitor.create({
       name: req.body.name,
       affiliation: req.body.affiliation,
-      visit_date: req.body.visit_date
+      visit_date: req.body.visit_date,
+      website: req.body.website
   }).then(visitor => res.json(visitor));
   
   // can write a delete-visitor part also 
