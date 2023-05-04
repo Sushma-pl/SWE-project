@@ -26,7 +26,7 @@ import AddPublication from "./components/Profile/AddPublication";
 import UploadPictures from "./components/Profile/UploadPictures";
 import AddVisitor from "./components/Profile/AddVisitor";
 import AddAlumni from "./components/Profile/AddAlumni";
-
+import SignUp from "./components/Login_page/SignUp"
 function App() {
   return (
     <Router>
@@ -63,6 +63,11 @@ function App() {
             path="/login/change-password"
             element={<ChangePassword />}
           />
+          <Route
+            exact
+            path="/SignUp"
+            element={<SignUp />}
+          />
           <Route exact path="/member/students" element={<Student />} />
           <Route exact path="/gallery/photos" element={<Photos />} />
           <Route exact path="/gallery/video" element={<Videos />} />
@@ -75,13 +80,13 @@ function App() {
             path="/profile/add-conference"
             element={<AddConference />}
           />
+          <Route exact path="/profile/add-seminar" element={<AddSeminar />} />
+          <Route exact path="/profile/add-award" element={<AddAward />} />
           <Route
             exact
-            path="/profile/add-seminar"
-            element={<AddSeminar />}
+            path="/profile/add-publication"
+            element={<AddPublication />}
           />
-          <Route exact path="/profile/add-award" element={<AddAward />} />
-          <Route exact path="/profile/add-publication" element={<AddPublication />} />
           <Route
             exact
             path="/profile/upload-pictures"
