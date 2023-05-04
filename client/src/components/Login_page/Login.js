@@ -2,60 +2,66 @@
 import "font-awesome/css/font-awesome.min.css";
 import React , {Component} from "react";
 import { Link } from "react-router-dom";
-// import { redirect } from "react-router-dom";
-import googleButton from "./google_signin_buttons/web/1x/btn_google_signin_dark_normal_web.png";
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import axios from "axios";
+
 import "./Login.css";
 export class Login extends Component {
-  state = {
-    username: "",
-    password: "",
-    redirectTo: null,
+  state = { email: "", success: false, error: false };
+
+  onLogin = (e) => {
+    e.preventDefault();
+
+    const { email, password } = this.state;
+
+    axios({
+      url: "http://localhost:5000/auth/login",
+      method: "POST",
+      data: { email, password },
+    })
+      .then((res) => {
+        window.localStorage.setItem("isAuthenticated", true);
+        if (res.status === 200) {
+          this.setState({ success: true, error: false });
+          this.props.history.push("/");
+        }
+      })
+      .catch(({ response }) => {
+        this.setState({ error: response.data.message, success: false });
+      });
   };
 
-  handleChange = (event) => {
+  onChange = (e) => {
+    const { name, value } = e.target;
     this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-
-    const { username, password } = this.state;
-
-    console.log("handleSubmit");
-
-    this.props.login(username, password);
-    this.setState({
-      redirectTo: "/",
+      [name]: value,
+      error: false,
+      success: false,
     });
   };
 
   render() {
-      const { username, password } = this.state;
-
+    // const { email, password } = this.state;
 
     return (
       <div className="Author-background">
         <div className="Auth-form-container">
-          <form className="Auth-form">
+          <form className="Auth-form" onSubmit={this.onLogin}>
+
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">
                 <i className="fas fa-user-circle icon-size"></i>
               </h3>
 
               <div className="form-group mt-3">
-                <label>Username</label>
+                <label>Enter email</label>
                 <input
                   type="text"
                   className="form-control mt-1"
-                  placeholder="Enter username"
+                  placeholder="Enter email"
                   required
-                  name="username"
-                  value={username}
-                  onChange={this.handleChange}
+                  name="email"
+
+                  onChange={this.onChange}
                 />
               </div>
               <div className="form-group mt-3">
@@ -66,8 +72,8 @@ export class Login extends Component {
                   placeholder="Enter password"
                   required
                   name="password"
-                  value={password}
-                  onChange={this.handleChange}
+
+                  onChange={this.onChange}
                 />
               </div>
               <div className="d-grid gap-2 mt-3">

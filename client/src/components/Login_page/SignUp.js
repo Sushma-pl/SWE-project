@@ -1,44 +1,70 @@
-import React, { Component } from 'react'
-import "./ChangePassword.css"
+import React, { Component } from "react";
+import "./ChangePassword.css";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import passport from "passport";
 export class SignUp extends Component {
   state = {
+    email: "",
     username: "",
     password: "",
-    confirmPassword: "",
-    redirectTo: null,
+    success: false,
+    error: false,
   };
 
-  handleChange = (event) => {
+  onSignup = (e) => {
+    e.preventDefault();
+
+    const { email, username, password } = this.state;
+
+    axios({
+      url: "http://localhost:5000/auth/register",
+      method: "POST",
+      data: { email, username, password },
+    })
+      .then((res) => {
+        window.localStorage.setItem("isAuthenticated", true);
+        if (res.status === 200) {
+          this.setState({ success: true, error: false });
+          this.props.history.push("/");
+        }
+      })
+      .catch(({ response }) => {
+        this.setState({ error: response.data.message, success: false });
+      });
+  };
+
+  onChange = (e) => {
+    const { name, value } = e.target;
     this.setState({
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    // TODO - validate your input!
-
-    const { username, password } = this.state;
-
-    axios.post("/auth/signup", { username, password }).then((response) => {
-      console.log(response);
-      if (!response.data.error) {
-        console.log("youre good");
-
-      } else {
-        console.log(response.data.error);
-      }
+      [name]: value,
+      error: false,
+      success: false,
     });
   };
   render() {
-    const { username, password, confirmPassword } = this.state;
+    const { error, success } = this.state;
     return (
       <div className="ChangeAuthor-background">
         <div className="ChangeAuth-form-container">
-          <form className="ChangeAuth-form">
+          <form className="ChangeAuth-form" onSubmit={this.onSignup}>
+            {success && "You've registered in successfully"}
+            {error}
             <div className="ChangeAuth-form-content">
               <h3 className="ChangeAuth-form-title">Sign up</h3>
+
+              <div className="form-group mt-1">
+                <label>Enter e-mail</label>
+                <input
+                  type="email"
+                  className="form-control mt-1"
+                  placeholder="enter email"
+                  required
+                  name="email"
+                  value={email}
+                  onChange={this.onChange}
+                />
+              </div>
 
               <div className="form-group mt-3">
                 <label>Username</label>
@@ -49,7 +75,7 @@ export class SignUp extends Component {
                   required
                   name="username"
                   value={username}
-                  onChange={this.handleChange}
+                  onChange={this.onChange}
                 />
               </div>
 
@@ -62,31 +88,13 @@ export class SignUp extends Component {
                   required
                   name="password"
                   value={password}
-                  onChange={this.handleChange}
-                />
-              </div>
-
-              <div className="form-group mt-1">
-                <label>Re-enter Password</label>
-                <input
-                  type="password"
-                  className="form-control mt-1"
-                  placeholder="re-enter password"
-                  required
-                  name="confirmPassword"
-                  value={confirmPassword}
-                  onChange={this.handleChange}
+                  onChange={this.onChange}
                 />
               </div>
 
               <div className="d-grid gap-2 mt-3">
-                <button
-                  onClick={this.handleSubmit}
-                  type="submit"
-                  className="btn btn-primary"
-                >
+                <button type="submit" className="btn btn-primary">
                   <Link to="/Login">Submit</Link>
-
                 </button>
               </div>
             </div>
@@ -97,4 +105,4 @@ export class SignUp extends Component {
   }
 }
 
-export default SignUp
+export default SignUp;

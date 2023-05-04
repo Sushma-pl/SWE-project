@@ -29,7 +29,7 @@ app.use('/research/seminar',require('./routes/research/seminar'));
 app.use('/research/award',require('./routes/research/award'));
 app.use('/research/publication',require('./routes/research/publication'));
 
-app.use("/auth", require("./routes/Login/auth"));
+app.use("/auth", require("./routes/Login/Auth"));
 //previous work
 app.get('/', (req, res) => res.send('Hello world!'));
 

@@ -3,20 +3,37 @@ import Logo from './images/logo.png';
 import { Link } from 'react-router-dom'
 import "font-awesome/css/font-awesome.min.css";
 import "./Navbar.css";
-
+import axios from "axios";
 export class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isLoggedIn: false,
-    };
-    this.handleLogin = this.handleLogin.bind(this);
-  }
 
-  handleLogin() {
-    this.setState({ isLoggedIn: false });
+  state = {
+    username: "",
+    isLoggedIn : false,
+  };
+
+  componentDidMount() {
+    axios
+      .get("http://localhost:5000/User/getDetails")
+      .then(({ data: { username } }) => {
+        this.setState({ username });
+
+        this.state.isLoggedIn = true;
+      });
+      // .catch((err) => console.log(err));
   }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     isLoggedIn: false,
+  //   };
+  //   this.handleLogin = this.handleLogin.bind(this);
+  // }
+
+  // handleLogin() {
+  //   this.setState({ isLoggedIn: false });
+  // }
   render() {
+    // const { username } = this.state;
     return (
       <header>
         <div>
@@ -188,7 +205,7 @@ export class Navbar extends Component {
                         <button
                           type="button"
                           className="btn btn-outline-dark margin-class"
-                          onClick={this.handleLogin}
+                          // onClick={this.handleLogin}
                         >
                           <i className="fas fa-user login-size"></i> Login
                         </button>
@@ -206,7 +223,7 @@ export class Navbar extends Component {
                       </button>
                     </Link>
                   </li> */}
-                  <li>
+                  <ul>
                     {/* <Link to="/profile">
                       <span></span>
                       <button
@@ -233,14 +250,14 @@ export class Navbar extends Component {
                           <button
                             type="button"
                             className="btn btn-outline-dark margin-class"
-                            onClick={this.handleLogin}
+                            // onClick={this.handleLogin}
                           >
                             <i className="fas fa-user login-size"></i> SignUp
                           </button>
                         </Link>
                       )}
                     </li>
-                  </li>
+                  </ul>
                 </ul>
               </div>
             </div>
