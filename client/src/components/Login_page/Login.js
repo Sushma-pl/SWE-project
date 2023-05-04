@@ -1,52 +1,41 @@
-// import React,{useState} from 'react'
+import {useState, useContext} from 'react'
 import "font-awesome/css/font-awesome.min.css";
 import React , {Component} from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-
+import UserContext from "./UserContext";
 import "./Login.css";
-export class Login extends Component {
-  state = { email: "", success: false, error: false };
+function Login (){
 
-  onLogin = (e) => {
-    e.preventDefault();
+      const [email, setEmail] = useState("");
+      const [password, setPassword] = useState("");
+      const [loginError, setLoginError] = useState(false);
 
-    const { email, password } = this.state;
+      const user = useContext(UserContext);
 
-    axios({
-      url: "http://localhost:5000/auth/login",
-      method: "POST",
-      data: { email, password },
-    })
-      .then((res) => {
-        window.localStorage.setItem("isAuthenticated", true);
-        if (res.status === 200) {
-          this.setState({ success: true, error: false });
-          this.props.history.push("/");
-        }
-      })
-      .catch(({ response }) => {
-        this.setState({ error: response.data.message, success: false });
-      });
-  };
+      function loginUser(e) {
+        e.preventDefault();
 
-  onChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-      error: false,
-      success: false,
-    });
-  };
+        const data = { email, password };
+        axios
+          .post("http://localhost:5000/login", data, { withCredentials: true })
+          .then((response) => {
+            user.setEmail(response.data.email);
+            setEmail("");
+            setPassword("");
+            setLoginError(false);
+          })
+          .catch(() => {
+            setLoginError(true);
+          });
+      }
 
-  render() {
-    // const { email, password } = this.state;
 
     return (
       <div className="Author-background">
         <div className="Auth-form-container">
-          <form className="Auth-form" onSubmit={this.onLogin}>
-
+          <form className="Auth-form" onSubmit={(e) => loginUser(e)}>
+            {loginError && <div>LOGIN ERROR! WRONG EMAIL OR PASSWORD!</div>}
             <div className="Auth-form-content">
               <h3 className="Auth-form-title">
                 <i className="fas fa-user-circle icon-size"></i>
@@ -55,13 +44,12 @@ export class Login extends Component {
               <div className="form-group mt-3">
                 <label>Enter email</label>
                 <input
-                  type="text"
+                  type="email"
                   className="form-control mt-1"
-                  placeholder="Enter email"
+                  placeholder="email"
                   required
-                  name="email"
-
-                  onChange={this.onChange}
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
               <div className="form-group mt-3">
@@ -69,19 +57,14 @@ export class Login extends Component {
                 <input
                   type="password"
                   className="form-control mt-1"
-                  placeholder="Enter password"
+                  placeholder="password"
                   required
-                  name="password"
-
-                  onChange={this.onChange}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
               <div className="d-grid gap-2 mt-3">
-                <button
-                  type="submit"
-                  className="btn btn-primary"
-                  onClick={this.handleSubmit}
-                >
+                <button type="submit" className="btn btn-primary">
                   Login
                 </button>
                 <label>
@@ -101,20 +84,12 @@ export class Login extends Component {
                   </span>
                 </div>
               </div>
-
-              {/* <span className="forgot-password text-left mt-2">
-               <Link  to="/login/forgot-password">Forgot password?</Link>
-            </span>
-
-            <span className="forgot-password text-right mt-2">
-               <Link  to="/login/change-password">change password?</Link>
-            </span> */}
             </div>
           </form>
         </div>
       </div>
     );
-  }
+
 }
 
 export default Login;

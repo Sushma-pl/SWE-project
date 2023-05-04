@@ -2,38 +2,27 @@ import React, { Component } from 'react'
 import Logo from './images/logo.png';
 import { Link } from 'react-router-dom'
 import "font-awesome/css/font-awesome.min.css";
+import { useState, useEffect } from 'react';
 import "./Navbar.css";
 import axios from "axios";
-export class Navbar extends Component {
+function Navbar(){
 
-  state = {
-    username: "",
-    isLoggedIn : false,
-  };
+     const [email, setEmail] = useState("");
 
-  componentDidMount() {
-    axios
-      .get("http://localhost:5000/User/getDetails")
-      .then(({ data: { username } }) => {
-        this.setState({ username });
+     useEffect(() => {
+       axios
+         .get("http://localhost:5000/user", { withCredentials: true })
+         .then((response) => {
+           setEmail(response.data.email);
+         });
+     }, []);
 
-        this.state.isLoggedIn = true;
-      });
-      // .catch((err) => console.log(err));
-  }
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     isLoggedIn: false,
-  //   };
-  //   this.handleLogin = this.handleLogin.bind(this);
-  // }
+     function logout() {
+       axios
+         .post("http://localhost:5000/logout", {}, { withCredentials: true })
+         .then(() => setEmail(""));
+     }
 
-  // handleLogin() {
-  //   this.setState({ isLoggedIn: false });
-  // }
-  render() {
-    // const { username } = this.state;
     return (
       <header>
         <div>
@@ -189,16 +178,14 @@ export class Navbar extends Component {
                 </ul>
                 <ul className="navbar-nav navbar-right">
                   <li>
-                    {this.state.isLoggedIn ? (
-                      <Link to="/logout">
-                        <span></span>
-                        <button
-                          type="button"
-                          className="btn btn-outline-dark margin-class"
-                        >
-                          <i className="fas fa-user login-size"></i> Logout
-                        </button>
-                      </Link>
+                    {!!email ? (
+                      <button
+                        type="button"
+                        className="btn btn-outline-dark margin-class"
+                        onClick={() => logout()}
+                      >
+                        <i className="fas fa-user login-size"></i> Logout
+                      </button>
                     ) : (
                       <Link to="/Login">
                         <span></span>
@@ -234,7 +221,7 @@ export class Navbar extends Component {
                       </button>
                     </Link> */}
                     <li>
-                      {this.state.isLoggedIn ? (
+                      {!!email ? (
                         <Link to="/Profile">
                           <span></span>
                           <button
@@ -266,6 +253,6 @@ export class Navbar extends Component {
       </header>
     );
   }
-}
+
 
 export default Navbar

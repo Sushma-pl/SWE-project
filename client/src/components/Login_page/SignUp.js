@@ -2,54 +2,31 @@ import React, { Component } from "react";
 import "./ChangePassword.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import passport from "passport";
-export class SignUp extends Component {
-  state = {
-    email: "",
-    username: "",
-    password: "",
-    success: false,
-    error: false,
-  };
+import UserContext from "./UserContext";
+import { useState, useContext } from "react";
+function SignUp() {
 
-  onSignup = (e) => {
-    e.preventDefault();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
 
-    const { email, username, password } = this.state;
+    const user = useContext(UserContext);
 
-    axios({
-      url: "http://localhost:5000/auth/register",
-      method: "POST",
-      data: { email, username, password },
-    })
-      .then((res) => {
-        window.localStorage.setItem("isAuthenticated", true);
-        if (res.status === 200) {
-          this.setState({ success: true, error: false });
-          this.props.history.push("/");
-        }
-      })
-      .catch(({ response }) => {
-        this.setState({ error: response.data.message, success: false });
-      });
-  };
+    function registerUser(e) {
+      e.preventDefault();
 
-  onChange = (e) => {
-    const { name, value } = e.target;
-    this.setState({
-      [name]: value,
-      error: false,
-      success: false,
-    });
-  };
-  render() {
-    const { error, success } = this.state;
+      const data = { email, password };
+      axios
+        .post("http://localhost:5000/register", data, { withCredentials: true })
+        .then((response) => {
+          user.setEmail(response.data.email);
+          setEmail("");
+          setPassword("");
+        });
+    }
     return (
       <div className="ChangeAuthor-background">
         <div className="ChangeAuth-form-container">
-          <form className="ChangeAuth-form" onSubmit={this.onSignup}>
-            {success && "You've registered in successfully"}
-            {error}
+          <form className="ChangeAuth-form" onSubmit={(e) => registerUser(e)}>
             <div className="ChangeAuth-form-content">
               <h3 className="ChangeAuth-form-title">Sign up</h3>
 
@@ -58,24 +35,11 @@ export class SignUp extends Component {
                 <input
                   type="email"
                   className="form-control mt-1"
-                  placeholder="enter email"
+                  placeholder="email"
                   required
                   name="email"
                   value={email}
-                  onChange={this.onChange}
-                />
-              </div>
-
-              <div className="form-group mt-3">
-                <label>Username</label>
-                <input
-                  type="text"
-                  className="form-control mt-1"
-                  placeholder="Enter username"
-                  required
-                  name="username"
-                  value={username}
-                  onChange={this.onChange}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
 
@@ -84,11 +48,11 @@ export class SignUp extends Component {
                 <input
                   type="password"
                   className="form-control mt-1"
-                  placeholder="enter password"
+                  placeholder="password"
                   required
                   name="password"
-                  value={password}
-                  onChange={this.onChange}
+                  vvalue={password}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
 
@@ -102,7 +66,7 @@ export class SignUp extends Component {
         </div>
       </div>
     );
-  }
+
 }
 
 export default SignUp;
