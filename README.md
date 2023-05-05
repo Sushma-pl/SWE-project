@@ -48,7 +48,7 @@ npm start
 ## Possible extensions 
 * We can add google authentication using `passport-google-oauth20`.
 * We can include a search bar to search across differnt pages.
-* We can deploy website using `Heroku` or `aws`.
+* We can deploy website using `Heroku` or `AWS` or any other cloud platform.
 * Inheritance can be added in code to remove redundant functionalities.
 * In lab members, students and mentors can be differentiated and have differnt profile pages.
 ## UI Snapshots
