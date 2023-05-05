@@ -11,7 +11,7 @@ function Navbar(){
 
      useEffect(() => {
        axios
-         .get("http://localhost:5000/user", { withCredentials: true })
+         .get("http://localhost:5000/login", { withCredentials: true })
          .then((response) => {
            setEmail(response.data.email);
          });

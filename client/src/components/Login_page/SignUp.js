@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import "./ChangePassword.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ function SignUp() {
 
       const data = { email, password };
       axios
-        .post("http://localhost:5000/register", data, { withCredentials: true })
+        .post("http://localhost:5000/SignUp", data, { withCredentials: true })
         .then((response) => {
           user.setEmail(response.data.email);
           setEmail("");
