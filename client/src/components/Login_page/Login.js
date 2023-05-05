@@ -1,6 +1,6 @@
 import {useState, useContext} from 'react'
 import "font-awesome/css/font-awesome.min.css";
-import React , {Component} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import UserContext from "./UserContext";
