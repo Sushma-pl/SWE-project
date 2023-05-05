@@ -54,12 +54,13 @@ npm start
 ## UI Snapshots
 Home page:
 ![image](https://user-images.githubusercontent.com/80624481/236484996-419492c6-8a28-4c0a-a02d-ead766e4dde6.png)
+
 Mentors in Members:
 ![image](https://user-images.githubusercontent.com/80624481/236485400-4ed076bc-2c70-4cce-9cfc-01d34328aa87.png)
+
 Facilities in Research:
 ![image](https://user-images.githubusercontent.com/80624481/236485849-f2f58fea-ccce-458d-8a1c-a419510cd454.png)
-Photos in Gallery:
-![image](https://user-images.githubusercontent.com/80624481/236486195-958cb610-ad4c-41d6-8e02-3a6f23e5af36.png)
+
 Edit Profile:
 ![image](https://user-images.githubusercontent.com/80624481/236486546-34535ec5-40cf-4fac-a5a0-941e11cfb76c.png)
 
