@@ -1,5 +1,5 @@
 # Research lab management system 
-Research Lab Management System (RLMS) is a website intended to feature all lab-related information at one place, including lab members, research work, upcoming events, awards, and publications. Additionally, lab members should be able to modify the information presented on the website.
+Research Lab Management System (RLMS) is a website intended to feature all lab-related information at one place, including lab members, research work, upcoming events, awards, and publications. Additionally, lab members should be able to modify the information present on the website.
 This project is part of CS4433 course. We are Team-4. 
 ## Team members
 * Namita Kumari (CS20BTECH11034)
@@ -43,14 +43,14 @@ npm start
 ## How to use?
 * All users can open website and view home, members, research and gallery pages. There are two buttons to login and signup.
 * All lab members(whose emails are present in whitelist array in code) will be able to sign up. They can login and access profile pages.
-* Profile page consists of edit profile, add conference, add seminars, add visitors, add alumini and some other add pages.
+* Profile pages consists of edit profile, add conference, add seminars, add visitors, add alumini and some other add pages.
 * The data added through these profile and add pages is displayed in the respective view pages under members and research.
 ## Possible extensions 
 * We can add google authentication using `passport-google-oauth20`.
 * We can include a search bar to search across differnt pages.
 * We can deploy website using `Heroku` or `AWS` or any other cloud platform.
 * Inheritance can be added in code to remove redundant functionalities.
-* In lab members, students and mentors can be differentiated and have differnt profile pages.
+* In lab members, students and mentors can be differentiated and have different profile pages.
 ## UI Snapshots
 Home page:
 ![image](https://user-images.githubusercontent.com/80624481/236484996-419492c6-8a28-4c0a-a02d-ead766e4dde6.png)
