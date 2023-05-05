@@ -34,10 +34,10 @@ app.use("/research/conference", require("./routes/research/conference"));
 app.use("/research/seminar", require("./routes/research/seminar"));
 app.use("/research/award", require("./routes/research/award"));
 app.use("/research/publication", require("./routes/research/publication"));
-app.use("/login", require("./routes/LoginPage/login"));
-app.use("/SignUp", require("./routes/LoginPage/register"));
-app.use("/user", require("./routes/LoginPage/user"));
-
+// app.use("/login", require("./routes/LoginPage/login"));
+// app.use("/SignUp", require("./routes/LoginPage/register"));
+// app.use("/user", require("./routes/LoginPage/user"));
+app.use("/user", require("./routes/loginRoutes"));
 //previous work
 app.get("/", (req, res) => res.send("Hello world!"));
 

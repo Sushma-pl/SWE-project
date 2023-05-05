@@ -16,7 +16,7 @@ function SignUp() {
 
       const data = { email, password };
       axios
-        .post("http://localhost:5000/SignUp", data, { withCredentials: true })
+        .post("http://localhost:5000/user/register", data, { withCredentials: true })
         .then((response) => {
           user.setEmail(response.data.email);
           setEmail("");
