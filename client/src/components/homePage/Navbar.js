@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useContext } from 'react'
 import Logo from './images/logo.png';
 import { Link } from 'react-router-dom'
 import "font-awesome/css/font-awesome.min.css";
@@ -9,14 +9,17 @@ import axios from "axios";
 function Navbar(){
 
      const [email, setEmail] = useState("");
+     const userInfo = useContext(UserContext);
 
      useEffect(() => {
+      if (userInfo.email) {
        axios
          .get("http://localhost:5000/user", { withCredentials: true })
          .then((response) => {
            setEmail(response.data.email);
          });
-     }, []);
+     }
+    }, [userInfo.email]);
 
      function logout() {
        axios
