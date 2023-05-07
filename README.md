@@ -6,6 +6,11 @@ This project is part of CS4433 course. We are Team-4.
 * Lanka Prasanna (CS20BTECH11029)
 * Sushma (CS20BTECH11051)
 * Monika Kharadi (CS20BTECH11026)
+
+## URLs (after deployment)
+Backend: https://rlms-backend.onrender.com
+Frontend: https://rlms-frontend.netlify.app
+
 ## Project set-up
 Run the following commands to use RLMS <br/>
 ```bash
